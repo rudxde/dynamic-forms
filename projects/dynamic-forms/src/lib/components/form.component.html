@@ -1,0 +1,17 @@
+<form [formGroup]="myForm">
+  <div *ngFor="let x of indexedFormDefinition" class="form-element">
+    <dynamic-forms-input-element *ngIf="x.type === 'input'" [XFormGroup]="myForm" [XFormField]="x"></dynamic-forms-input-element>
+    <dynamic-forms-checkbox-element *ngIf="x.type === 'check'" [XFormGroup]="myForm" [XFormField]="x"></dynamic-forms-checkbox-element>
+    <dynamic-forms-radiogroup-element *ngIf="x.type === 'radio'" [XFormGroup]="myForm" [XFormField]="x">
+    </dynamic-forms-radiogroup-element>
+    <dynamic-forms-slide-element *ngIf="x.type === 'slide'" [XFormGroup]="myForm" [XFormField]="x"></dynamic-forms-slide-element>
+    <dynamic-forms-slider-element *ngIf="x.type === 'slider'" [XFormGroup]="myForm" [XFormField]="x"></dynamic-forms-slider-element>
+    <dynamic-forms-select-element *ngIf="x.type === 'select'" [XFormGroup]="myForm" [XFormField]="x"></dynamic-forms-select-element>
+  </div>
+  <button mat-raised-button color="secondary" *ngIf="abortButton" (click)="abortClick()">
+    {{abortButtonText}}
+  </button>
+  <button mat-raised-button color="primary" [disabled]="myForm.invalid" (click)="submitClick()">
+    {{submitButtonText}}
+  </button>
+</form>
