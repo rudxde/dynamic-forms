@@ -36,7 +36,7 @@ export class FormComponent implements OnInit {
     for (let i = 0; i < form.length; i++) {
       result.push({
         ...form[i],
-        id: i
+        id: form[i].id || i
       });
     }
     return result;

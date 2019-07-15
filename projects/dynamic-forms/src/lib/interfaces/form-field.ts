@@ -2,11 +2,12 @@ import { IValidatorFormField } from './form-field-validator';
 
 export interface IFormField extends IValidatorFormField {
   type: string;
+  id?: number | string;
   default?: string | number | boolean;
 }
 
 export interface IIndexedFormField extends IFormField {
-  id: number;
+  id: number | string;
 }
 
 export interface IInputField extends IFormField {

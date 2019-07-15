@@ -1,8 +1,8 @@
 (function (global, factory) {
-    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/material'), require('@angular/forms'), require('@angular/core'), require('@angular/common'), require('@angular/platform-browser')) :
-    typeof define === 'function' && define.amd ? define('dynamic-forms', ['exports', '@angular/material', '@angular/forms', '@angular/core', '@angular/common', '@angular/platform-browser'], factory) :
-    (factory((global['dynamic-forms'] = {}),global.ng.material,global.ng.forms,global.ng.core,global.ng.common,global.ng.platformBrowser));
-}(this, (function (exports,material,forms,core,common,platformBrowser) { 'use strict';
+    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/material'), require('@angular/forms'), require('@angular/core'), require('@angular/common')) :
+    typeof define === 'function' && define.amd ? define('dynamic-forms', ['exports', '@angular/material', '@angular/forms', '@angular/core', '@angular/common'], factory) :
+    (factory((global['dynamic-forms'] = {}),global.ng.material,global.ng.forms,global.ng.core,global.ng.common));
+}(this, (function (exports,material,forms,core,common) { 'use strict';
 
     /*! *****************************************************************************
     Copyright (c) Microsoft Corporation. All rights reserved.
@@ -132,7 +132,7 @@
                 /** @type {?} */
                 var result = [];
                 for (var i = 0; i < form.length; i++) {
-                    result.push(__assign({}, form[i], { id: i }));
+                    result.push(__assign({}, form[i], { id: form[i].id || i }));
                 }
                 return result;
             };
@@ -418,7 +418,6 @@
                         ],
                         imports: [
                             common.CommonModule,
-                            platformBrowser.BrowserModule,
                             forms.FormsModule,
                             forms.ReactiveFormsModule,
                             material.MatInputModule,

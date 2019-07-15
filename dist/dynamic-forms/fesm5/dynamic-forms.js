@@ -4,7 +4,6 @@ import 'rxjs';
 import { __extends, __assign, __values } from 'tslib';
 import { Input, Component, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { BrowserModule } from '@angular/platform-browser';
 
 /**
  * @fileoverview added by tsickle
@@ -85,7 +84,7 @@ var FormComponent = /** @class */ (function () {
         /** @type {?} */
         var result = [];
         for (var i = 0; i < form.length; i++) {
-            result.push(__assign({}, form[i], { id: i }));
+            result.push(__assign({}, form[i], { id: form[i].id || i }));
         }
         return result;
     };
@@ -364,7 +363,6 @@ var DynamicFormsModule = /** @class */ (function () {
                     ],
                     imports: [
                         CommonModule,
-                        BrowserModule,
                         FormsModule,
                         ReactiveFormsModule,
                         MatInputModule,

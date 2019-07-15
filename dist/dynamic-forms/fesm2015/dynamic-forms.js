@@ -3,7 +3,6 @@ import { FormBuilder, Validators, FormsModule, ReactiveFormsModule } from '@angu
 import 'rxjs';
 import { Input, Component, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { BrowserModule } from '@angular/platform-browser';
 
 /**
  * @fileoverview added by tsickle
@@ -73,7 +72,7 @@ class FormComponent {
         /** @type {?} */
         const result = [];
         for (let i = 0; i < form.length; i++) {
-            result.push(Object.assign({}, form[i], { id: i }));
+            result.push(Object.assign({}, form[i], { id: form[i].id || i }));
         }
         return result;
     }
@@ -301,7 +300,6 @@ DynamicFormsModule.decorators = [
                 ],
                 imports: [
                     CommonModule,
-                    BrowserModule,
                     FormsModule,
                     ReactiveFormsModule,
                     MatInputModule,
