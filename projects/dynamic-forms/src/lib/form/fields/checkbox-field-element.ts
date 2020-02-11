@@ -5,7 +5,7 @@ import { FormDefinition } from '../form-definition';
 import { FormGroup } from '@angular/forms';
 import { BehaviorSubject } from 'rxjs';
 import { ImportanceColor, CHECK_TYPE, alignType } from './entity-types';
-import { Functionality } from 'simple-expression';
+import { Functionality } from 'custom-exp';
 
 
 export interface ICheckboxField extends IFormField {

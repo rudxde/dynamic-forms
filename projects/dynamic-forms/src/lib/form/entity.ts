@@ -1,6 +1,6 @@
 import { FormDefinition } from './form-definition';
 import { IFormElementDefinition } from './form-element-definition';
-import { evaluateExpression, Functionality } from 'simple-expression';
+import { evaluateExpression, Functionality } from 'custom-exp';
 import { InitFunctionality } from './initfunctionality';
 export interface IStaticEntityModel<T> {
   type: 'static';

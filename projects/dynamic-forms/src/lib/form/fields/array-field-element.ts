@@ -5,7 +5,7 @@ import { FormDefinition } from '../form-definition';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { BehaviorSubject } from 'rxjs';
 import { ARRAY_TYPE } from './entity-types';
-import { Functionality } from 'simple-expression';
+import { Functionality } from 'custom-exp';
 
 export interface IArrayField extends IFormField {
   type: typeof ARRAY_TYPE;

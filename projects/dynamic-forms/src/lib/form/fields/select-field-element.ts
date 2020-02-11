@@ -5,7 +5,7 @@ import { FormDefinition } from '../form-definition';
 import { FormGroup } from '@angular/forms';
 import { BehaviorSubject } from 'rxjs';
 import { SELECT_TYPE } from './entity-types';
-import { Functionality } from 'simple-expression';
+import { Functionality } from 'custom-exp';
 
 export interface ISelectField extends IFormField {
   type: typeof SELECT_TYPE;

@@ -6,7 +6,7 @@ import { BehaviorSubject } from 'rxjs';
 import { FormGroup } from '@angular/forms';
 import { IInputField } from './input-field-element';
 import { alignType, RADIO_TYPE } from './entity-types';
-import { Functionality } from 'simple-expression';
+import { Functionality } from 'custom-exp';
 
 export interface IRadioGroupField extends IFormField {
   type: typeof RADIO_TYPE;

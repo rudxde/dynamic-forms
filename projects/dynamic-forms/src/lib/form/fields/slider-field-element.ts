@@ -5,7 +5,7 @@ import { FormDefinition } from '../form-definition';
 import { FormGroup } from '@angular/forms';
 import { BehaviorSubject } from 'rxjs';
 import { SLIDER_TYPE } from './entity-types';
-import { Functionality } from 'simple-expression';
+import { Functionality } from 'custom-exp';
 
 export interface ISliderField extends IFormField {
   type: typeof SLIDER_TYPE;

@@ -5,7 +5,7 @@ import { IFormField } from '../form-element-model';
 import { BehaviorSubject } from 'rxjs';
 import { FormGroup } from '@angular/forms';
 import { INPUT_TYPE } from './entity-types';
-import { Functionality } from 'simple-expression';
+import { Functionality } from 'custom-exp';
 
 export interface IInputField extends IFormField {
   type: typeof INPUT_TYPE;

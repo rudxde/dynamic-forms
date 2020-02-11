@@ -1,5 +1,5 @@
 import { IFormElementDefinition } from './form-element-definition';
-import { Functionality } from 'simple-expression';
+import { Functionality } from 'custom-exp';
 import { FormDefinition } from './form-definition';
 import { ArrayField } from './fields/array-field-element';
 import { CheckboxField } from './fields/checkbox-field-element';
