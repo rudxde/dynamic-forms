@@ -1,16 +1,14 @@
 import { NgModule } from '@angular/core';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import {
-  MatInputModule,
-  MatButtonModule,
-  MatSliderModule,
-  MatSelectModule,
-  MatCheckboxModule,
-  MatRadioModule,
-  MatSlideToggleModule,
-  MatCardModule,
-} from '@angular/material';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatInputModule } from '@angular/material/input';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatSelectModule } from '@angular/material/select';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatSliderModule } from '@angular/material/slider';
 import { CheckboxElementComponent } from './components/fields/checkbox-element/checkbox-element.component';
 import { FormComponent } from './components/form.component';
 import { InputElementComponent } from './components/fields/input-element/input-element.component';
