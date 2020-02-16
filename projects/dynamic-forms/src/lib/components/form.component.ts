@@ -5,7 +5,7 @@ import { Subject, Observable, BehaviorSubject } from 'rxjs';
 import { FormDefinition, IFormModel } from '../form/form-definition';
 
 @Component({
-  selector: 'dynamic-forms-form',
+  selector: 'dynamic-form',
   templateUrl: './form.component.html',
   styleUrls: ['./form.component.less']
 })

@@ -1,9 +1,0 @@
-<button (click)="editor = !editor">switch</button>
-<div *ngIf="editor">
-  <!-- <dynamic-forms-forms-editor></dynamic-forms-forms-editor> -->
-</div>
-<div *ngIf="!editor">
-  <dynamic-forms-form submitButtonText="Absenden" abortButtonText="Abbrechen" [abortButton]="true" [formModel]="getDemoData()"
-    [result$]="formResult$"></dynamic-forms-form>
-</div>
-
