@@ -1,17 +1,19 @@
-## Build
-run ```ng build dynamic-forms```
+# Dynamic Reactive Forms
 
-## Import
-install the content from the dist/dynamic-forms folder via NPM.
-
-Make sure in your project the ```preserveSymlinks``` flag ist set.
-
+## Installation
+run:
 ```
-{"projects": {
-    "MyApp": {
-      "architect": {
-        "build": {
-          "options": {
-            "preserveSymlinks": true, // <-----
-[...]
+ng add @angular/material
+npm i --save custom-exp dynamic-reactive-forms
+```
+
+app.component:
+```ts
+import { DynamicFormsModule } from 'dynamic-reactive-forms';
+
+@NgModule({
+ imports: [
+     DynamicFormsModule,
+ ]
+})
 ```

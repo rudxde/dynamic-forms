@@ -1,0 +1,14 @@
+<div *ngFor="let field of form;let i = index">
+  <button mat-raised-button color="secondary" (click)="field.editorOpen = true">Bearbeiten</button>
+  <button mat-raised-button color="secondary" (click)="moveUp(i)">Up</button>
+  <button mat-raised-button color="secondary" (click)="moveDown(i)">Down</button>
+  <dynamic-reactive-forms-form [hideSubmitButton]="true" [form$]="field.fieldPreview$"></dynamic-reactive-forms-form>
+  <mat-card *ngIf="field.editorOpen">
+    <dynamic-reactive-forms-form [abortButton]="true" [form$]="field.editorForm$" [changes$]="field.changes$"
+      abortButtonText="Abbrechen" submitButtonText="Übernehmen" [result$]="field.closeEditor$">
+    </dynamic-reactive-forms-form>
+  </mat-card>
+</div>
+
+<button mat-raised-button color="primary" (click)="logResult()">ShowResult</button>
+

@@ -1,0 +1,11 @@
+{
+  "name": "dynamic-reactive-forms",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "9.x",
+    "@angular/core": "9.x",
+    "@angular/material": "9.x",
+    "custom-exp": "1.x",
+    "tslib": "^1.x"
+  }
+}

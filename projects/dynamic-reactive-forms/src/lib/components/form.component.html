@@ -1,0 +1,18 @@
+<form *ngIf="myForm" [formGroup]="myForm">
+  <div *ngFor="let x of form.elements" class="form-element">
+    <dynamic-reactive-forms-input-element *ngIf="x.type === 'input'" [XFormGroup]="myForm" [XFormField]="x"></dynamic-reactive-forms-input-element>
+    <dynamic-reactive-forms-checkbox-element *ngIf="x.type === 'check'" [XFormGroup]="myForm" [XFormField]="x"></dynamic-reactive-forms-checkbox-element>
+    <dynamic-reactive-forms-radio-group-element *ngIf="x.type === 'radio'" [XFormGroup]="myForm" [XFormField]="x">
+    </dynamic-reactive-forms-radio-group-element>
+    <dynamic-reactive-forms-slide-element *ngIf="x.type === 'slide'" [XFormGroup]="myForm" [XFormField]="x"></dynamic-reactive-forms-slide-element>
+    <dynamic-reactive-forms-slider-element *ngIf="x.type === 'slider'" [XFormGroup]="myForm" [XFormField]="x"></dynamic-reactive-forms-slider-element>
+    <dynamic-reactive-forms-select-element *ngIf="x.type === 'select'" [XFormGroup]="myForm" [XFormField]="x"></dynamic-reactive-forms-select-element>
+    <dynamic-reactive-forms-array-element *ngIf="x.type === 'array'" [XFormGroup]="myForm" [XFormField]="x"></dynamic-reactive-forms-array-element>
+  </div>
+  <button mat-raised-button color="secondary" *ngIf="abortButton" (click)="abortClick()">
+    {{abortButtonText}}
+  </button>
+  <button mat-raised-button color="primary" *ngIf="!hideSubmitButton" [disabled]="myForm.invalid" (click)="submitClick()">
+    {{submitButtonText}}
+  </button>
+</form>
