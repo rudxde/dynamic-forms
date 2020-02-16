@@ -19,9 +19,9 @@
       "dom"
     ],
     "paths": {
-      "dynamic-forms": [
-        "dist/dynamic-forms/dynamic-forms",
-        "dist/dynamic-forms"
+      "dynamic-reactive-forms": [
+        "dist/dynamic-reactive-forms/dynamic-reactive-forms",
+        "dist/dynamic-reactive-forms"
       ]
     }
   },

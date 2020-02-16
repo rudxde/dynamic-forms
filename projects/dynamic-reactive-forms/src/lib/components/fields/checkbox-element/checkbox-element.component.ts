@@ -3,7 +3,7 @@ import { AbstractFormFieldComponent } from '../abstract-form-field/abstract-form
 import { CheckboxField } from '../../../form/fields/checkbox-field-element';
 
 @Component({
-  selector: 'dynamic-forms-checkbox-element',
+  selector: 'dynamic-reactive-forms-checkbox-element',
   templateUrl: './checkbox-element.component.html',
   styleUrls: ['./checkbox-element.component.less']
 })

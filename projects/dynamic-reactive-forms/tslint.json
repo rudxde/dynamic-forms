@@ -10,7 +10,7 @@
     "component-selector": [
       true,
       "element",
-      "dynamic-forms",
+      "dynamic-reactive-forms",
       "kebab-case"
     ]
   }

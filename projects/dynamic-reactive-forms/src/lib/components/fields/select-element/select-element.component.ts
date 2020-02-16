@@ -3,7 +3,7 @@ import { AbstractFormFieldComponent } from '../abstract-form-field/abstract-form
 import { SelectField } from '../../../form/fields/select-field-element';
 
 @Component({
-  selector: 'dynamic-forms-select-element',
+  selector: 'dynamic-reactive-forms-select-element',
   templateUrl: './select-element.component.html',
   styleUrls: ['./select-element.component.less']
 })

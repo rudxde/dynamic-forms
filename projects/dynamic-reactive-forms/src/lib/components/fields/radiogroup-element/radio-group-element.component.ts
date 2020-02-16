@@ -3,7 +3,7 @@ import { AbstractFormFieldComponent } from '../abstract-form-field/abstract-form
 import { RadioGroupField } from '../../../form/fields/radio-group-field-element';
 
 @Component({
-  selector: 'dynamic-forms-radio-group-element',
+  selector: 'dynamic-reactive-forms-radio-group-element',
   templateUrl: './radio-group-element.component.html',
   styleUrls: ['./radio-group-element.component.less']
 })

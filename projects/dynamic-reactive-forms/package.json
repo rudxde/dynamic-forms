@@ -1,5 +1,5 @@
 {
-  "name": "dynamic-forms",
+  "name": "dynamic-reactive-forms",
   "version": "0.0.1",
   "peerDependencies": {
     "@angular/common": "9.x",

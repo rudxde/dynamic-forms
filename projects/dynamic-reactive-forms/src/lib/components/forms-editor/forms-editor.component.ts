@@ -1,10 +1,10 @@
 // import { Component, OnInit } from '@angular/core';
 // import { IFormField, IInputField, getInputFieldFormEditor, ISliderField, getSliderFieldFormEditor, ICheckboxField, getCheckboxFieldFormEditor, getSlideFieldFormEditor, getRadioGroupFieldFormEditor, IRadioGroupField, getSelectFieldFormEditor } from '../../interfaces/form-field';
 // import { Subject, of, Observable, BehaviorSubject } from 'rxjs';
-// import { ISlideField, ISelectField } from 'dynamic-forms/public-api';
+// import { ISlideField, ISelectField } from 'dynamic-reactive-forms/public-api';
 
 // @Component({
-//   selector: 'dynamic-forms-forms-editor',
+//   selector: 'dynamic-reactive-forms-forms-editor',
 //   templateUrl: './forms-editor.component.html',
 //   styleUrls: ['./forms-editor.component.css']
 // })

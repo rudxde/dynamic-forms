@@ -3,7 +3,7 @@ import { AbstractFormFieldComponent } from '../abstract-form-field/abstract-form
 import { InputField } from '../../../form/fields/input-field-element';
 
 @Component({
-  selector: 'dynamic-forms-input-element',
+  selector: 'dynamic-reactive-forms-input-element',
   templateUrl: './input-element.component.html',
   styleUrls: ['./input-element.component.less']
 })

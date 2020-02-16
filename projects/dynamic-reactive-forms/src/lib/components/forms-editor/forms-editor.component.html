@@ -2,11 +2,11 @@
   <button mat-raised-button color="secondary" (click)="field.editorOpen = true">Bearbeiten</button>
   <button mat-raised-button color="secondary" (click)="moveUp(i)">Up</button>
   <button mat-raised-button color="secondary" (click)="moveDown(i)">Down</button>
-  <dynamic-forms-form [hideSubmitButton]="true" [form$]="field.fieldPreview$"></dynamic-forms-form>
+  <dynamic-reactive-forms-form [hideSubmitButton]="true" [form$]="field.fieldPreview$"></dynamic-reactive-forms-form>
   <mat-card *ngIf="field.editorOpen">
-    <dynamic-forms-form [abortButton]="true" [form$]="field.editorForm$" [changes$]="field.changes$"
+    <dynamic-reactive-forms-form [abortButton]="true" [form$]="field.editorForm$" [changes$]="field.changes$"
       abortButtonText="Abbrechen" submitButtonText="Übernehmen" [result$]="field.closeEditor$">
-    </dynamic-forms-form>
+    </dynamic-reactive-forms-form>
   </mat-card>
 </div>
 

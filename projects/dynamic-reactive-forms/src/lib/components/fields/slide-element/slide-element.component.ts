@@ -3,7 +3,7 @@ import { AbstractFormFieldComponent } from '../abstract-form-field/abstract-form
 import { SlideField } from '../../../form/fields/slide-field-element';
 
 @Component({
-  selector: 'dynamic-forms-slide-element',
+  selector: 'dynamic-reactive-forms-slide-element',
   templateUrl: './slide-element.component.html',
   styleUrls: ['./slide-element.component.less']
 })

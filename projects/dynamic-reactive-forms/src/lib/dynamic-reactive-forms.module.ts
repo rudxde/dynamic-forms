@@ -50,4 +50,4 @@ import { ArrayElementComponent } from './components/fields/array-element/array-e
     // FormsEditorComponent,
   ]
 })
-export class DynamicFormsModule { }
+export class DynamicReactiveFormsModule { }

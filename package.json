@@ -1,9 +1,9 @@
 {
-  "name": "dynamic-forms-app",
+  "name": "dynamic-reactive-forms-app",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "build": "ng build dynamic-forms"
+    "build": "ng build dynamic-reactive-forms"
   },
   "private": true,
   "dependencies": {

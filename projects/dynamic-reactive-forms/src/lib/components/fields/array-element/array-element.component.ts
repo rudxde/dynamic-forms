@@ -4,7 +4,7 @@ import { FormArray, FormBuilder } from '@angular/forms';
 import { ArrayField } from '../../../form/fields/array-field-element';
 
 @Component({
-  selector: 'dynamic-forms-array-element',
+  selector: 'dynamic-reactive-forms-array-element',
   templateUrl: './array-element.component.html',
   styleUrls: ['./array-element.component.css']
 })
