@@ -8,15 +8,15 @@ import { ICheckboxField } from './fields/checkbox-field-element';
 import { IRadioGroupField } from './fields/radio-group-field-element';
 
 export type IFormElementModel = IInputField
-  | ISliderField
-  | ISlideField
-  | ISelectField
-  | ICheckboxField
-  | IRadioGroupField
-  | IArrayField;
+| ISliderField
+| ISlideField
+| ISelectField
+| ICheckboxField
+| IRadioGroupField
+| IArrayField;
 
 export interface IFormField {
-  type: string;
-  id?: number | string;
-  default?: IEntityModel<string | number | boolean | string[]>;
+    type: string;
+    id?: number | string;
+    default?: IEntityModel<string | number | boolean | string[]>;
 }

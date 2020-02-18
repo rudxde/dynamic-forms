@@ -21,33 +21,33 @@ import { CommonModule } from '@angular/common';
 import { ArrayElementComponent } from './components/fields/array-element/array-element.component';
 
 @NgModule({
-  declarations: [
-    CheckboxElementComponent,
-    FormComponent,
-    InputElementComponent,
-    RadioGroupElementComponent,
-    SelectElementComponent,
-    SlideElementComponent,
-    SliderElementComponent,
+    declarations: [
+        CheckboxElementComponent,
+        FormComponent,
+        InputElementComponent,
+        RadioGroupElementComponent,
+        SelectElementComponent,
+        SlideElementComponent,
+        SliderElementComponent,
+        // FormsEditorComponent,
+        ArrayElementComponent,
+    ],
+    imports: [
+        CommonModule,
+        FormsModule,
+        ReactiveFormsModule,
+        MatInputModule,
+        MatButtonModule,
+        MatSliderModule,
+        MatSelectModule,
+        MatCheckboxModule,
+        MatRadioModule,
+        MatSlideToggleModule,
+        MatCardModule,
+    ],
+    exports: [
+        FormComponent,
     // FormsEditorComponent,
-    ArrayElementComponent,
-  ],
-  imports: [
-    CommonModule,
-    FormsModule,
-    ReactiveFormsModule,
-    MatInputModule,
-    MatButtonModule,
-    MatSliderModule,
-    MatSelectModule,
-    MatCheckboxModule,
-    MatRadioModule,
-    MatSlideToggleModule,
-    MatCardModule,
-  ],
-  exports: [
-    FormComponent,
-    // FormsEditorComponent,
-  ]
+    ],
 })
 export class DynamicReactiveFormsModule { }

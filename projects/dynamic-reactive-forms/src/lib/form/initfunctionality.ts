@@ -10,26 +10,26 @@ import { SlideField } from './fields/slide-field-element';
 import { SelectField } from './fields/select-field-element';
 
 export function InitFunctionality(thisElement: IFormElementDefinition, form: FormDefinition): Functionality {
-  const result = new Functionality();
-  addElementField(result, thisElement, 'this');
-  form.elements.forEach(element => addElementField(result, element));
-  ArrayField.addFunctionality(result);
-  CheckboxField.addFunctionality(result);
-  InputField.addFunctionality(result);
-  RadioGroupField.addFunctionality(result);
-  SliderField.addFunctionality(result);
-  SlideField.addFunctionality(result);
-  SelectField.addFunctionality(result);
-  return result;
+    const result = new Functionality();
+    addElementField(result, thisElement, 'this');
+    form.elements.forEach(element => addElementField(result, element));
+    ArrayField.addFunctionality(result);
+    CheckboxField.addFunctionality(result);
+    InputField.addFunctionality(result);
+    RadioGroupField.addFunctionality(result);
+    SliderField.addFunctionality(result);
+    SlideField.addFunctionality(result);
+    SelectField.addFunctionality(result);
+    return result;
 }
 
 
-function addElementField(functionality: Functionality, element: IFormElementDefinition, customId?: string) {
-  functionality.addField({
-    name: customId ? customId : element.id,
-    eval: () => ({
-      type: `${element.type}-field`,
-      value: element,
-    })
-  });
+function addElementField(functionality: Functionality, element: IFormElementDefinition, customId?: string): void {
+    functionality.addField({
+        name: customId ? customId : element.id,
+        eval: () => ({
+            type: `${element.type}-field`,
+            value: element,
+        }),
+    });
 }

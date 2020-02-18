@@ -3,17 +3,17 @@ import { AbstractFormFieldComponent } from '../abstract-form-field/abstract-form
 import { InputField } from '../../../form/fields/input-field-element';
 
 @Component({
-  selector: 'dynamic-reactive-forms-input-element',
-  templateUrl: './input-element.component.html',
-  styleUrls: ['./input-element.component.less']
+    selector: 'dynamic-reactive-forms-input-element',
+    templateUrl: './input-element.component.html',
+    styleUrls: ['./input-element.component.less'],
 })
 export class InputElementComponent extends AbstractFormFieldComponent<InputField> implements OnInit {
 
-  constructor() {
-    super();
-   }
+    constructor() {
+        super();
+    }
 
-  ngOnInit() {
-  }
+    ngOnInit(): void {
+    }
 
 }

@@ -3,17 +3,17 @@ import { AbstractFormFieldComponent } from '../abstract-form-field/abstract-form
 import { SelectField } from '../../../form/fields/select-field-element';
 
 @Component({
-  selector: 'dynamic-reactive-forms-select-element',
-  templateUrl: './select-element.component.html',
-  styleUrls: ['./select-element.component.less']
+    selector: 'dynamic-reactive-forms-select-element',
+    templateUrl: './select-element.component.html',
+    styleUrls: ['./select-element.component.less'],
 })
 export class SelectElementComponent extends AbstractFormFieldComponent<SelectField> implements OnInit {
 
-  constructor() {
-    super();
-  }
+    constructor() {
+        super();
+    }
 
-  ngOnInit() {
-  }
+    ngOnInit(): void {
+    }
 
 }

@@ -3,17 +3,17 @@ import { AbstractFormFieldComponent } from '../abstract-form-field/abstract-form
 import { RadioGroupField } from '../../../form/fields/radio-group-field-element';
 
 @Component({
-  selector: 'dynamic-reactive-forms-radio-group-element',
-  templateUrl: './radio-group-element.component.html',
-  styleUrls: ['./radio-group-element.component.less']
+    selector: 'dynamic-reactive-forms-radio-group-element',
+    templateUrl: './radio-group-element.component.html',
+    styleUrls: ['./radio-group-element.component.less'],
 })
 export class RadioGroupElementComponent extends AbstractFormFieldComponent<RadioGroupField> implements OnInit {
 
-  constructor() {
-    super();
-  }
+    constructor() {
+        super();
+    }
 
-  ngOnInit() {
-  }
+    ngOnInit(): void {
+    }
 
 }

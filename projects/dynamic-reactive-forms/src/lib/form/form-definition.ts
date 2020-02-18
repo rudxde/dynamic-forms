@@ -6,54 +6,54 @@ import { IFormElementModel } from './form-element-model';
 
 
 export interface IFormModel {
-  elements: IFormElementModel[];
+    elements: IFormElementModel[];
 }
 
 export class FormDefinition {
-  public elements: IFormElementDefinition[];
-  public updates$: Subject<void>;
-  public formGroup$: BehaviorSubject<FormGroup> = new BehaviorSubject(this.fb.group({}));
-  public result: object;
-  constructor(
-    fm: IFormModel,
-    private fb: FormBuilder,
-  ) {
-    this.updates$ = new Subject();
-    this.elements = fm.elements.reduce(
-      (prev, cur) => [...prev, FormElementDefinitionFactory(cur, this, prev.length, this.formGroup$, fb)],
-      [],
-    );
-    this.formCycle();
-  }
-
-  formCycle() {
-    this.evalAllValues();
-    console.log(this.elements, this.getReactiveFormObject());
-    this.formGroup$.next(this.fb.group(this.getReactiveFormObject()));
-    this.updates$.next();
-    this.formGroup$.value.valueChanges
-      .pipe(takeUntil(this.formGroup$.pipe(skip(1))))
-      .subscribe(x => {
-        this.result = x;
+    public elements: IFormElementDefinition[];
+    public updates$: Subject<void>;
+    public formGroup$: BehaviorSubject<FormGroup> = new BehaviorSubject(this.fb.group({}));
+    public result: object;
+    constructor(
+        fm: IFormModel,
+        private fb: FormBuilder,
+    ) {
+        this.updates$ = new Subject();
+        this.elements = fm.elements.reduce(
+            (prev, cur) => [...prev, FormElementDefinitionFactory(cur, this, prev.length, this.formGroup$, fb)],
+            [],
+        );
         this.formCycle();
-      });
-  }
+    }
 
-  element(id: string): IFormElementDefinition {
-    return this.elements.find(x => x.id === id);
-  }
+    formCycle(): void {
+        this.evalAllValues();
+        console.log(this.elements, this.getReactiveFormObject());
+        this.formGroup$.next(this.fb.group(this.getReactiveFormObject()));
+        this.updates$.next();
+        this.formGroup$.value.valueChanges
+            .pipe(takeUntil(this.formGroup$.pipe(skip(1))))
+            .subscribe(x => {
+                this.result = x;
+                this.formCycle();
+            });
+    }
 
-  evalAllValues() {
-    this.elements.forEach(x => x.evalValues());
-  }
+    element(id: string): IFormElementDefinition {
+        return this.elements.find(x => x.id === id);
+    }
 
-  getReactiveFormObject(): { [key: string]: any } {
-    return this.elements.reduce((prev, cur) => {
-      return {
-        ...cur.getReactiveFormObject(this.result),
-        ...prev,
-      };
-    }, {});
-  }
+    evalAllValues(): void {
+        this.elements.forEach(x => x.evalValues());
+    }
+
+    getReactiveFormObject(): { [key: string]: any } {
+        return this.elements.reduce((prev, cur) => {
+            return {
+                ...cur.getReactiveFormObject(this.result),
+                ...prev,
+            };
+        }, {});
+    }
 
 }

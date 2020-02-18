@@ -3,17 +3,17 @@ import { AbstractFormFieldComponent } from '../abstract-form-field/abstract-form
 import { SlideField } from '../../../form/fields/slide-field-element';
 
 @Component({
-  selector: 'dynamic-reactive-forms-slide-element',
-  templateUrl: './slide-element.component.html',
-  styleUrls: ['./slide-element.component.less']
+    selector: 'dynamic-reactive-forms-slide-element',
+    templateUrl: './slide-element.component.html',
+    styleUrls: ['./slide-element.component.less'],
 })
 export class SlideElementComponent extends AbstractFormFieldComponent<SlideField> implements OnInit {
 
-  constructor() {
-    super();
-   }
+    constructor() {
+        super();
+    }
 
-  ngOnInit() {
-  }
+    ngOnInit(): void {
+    }
 
 }
